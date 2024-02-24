@@ -4,12 +4,10 @@ Libertree is a Scala library designed to facilitate the creation, manipulation, 
 The library is under development and should be used with caution.
 
 ## Features
-
-- **Tree Creation**: Simplify the creation of trees with nested branches and leaves.
 - **Mapping**: Apply functions to every element in a tree, producing a transformed tree.
 - **Listing**: Convert trees into list representations, maintaining hierarchical order.
 - **Grafting**: Enrich trees with data from another tree based on matching criteria, perfect for associating related data across different trees.
-- **Display**: Pretty-print trees for easy visualization and debugging.
+- **Combining**: Allows working with two mirrored trees of different types, may be used to do diffs between two versions of a tree.
 
 
 ## Usage
