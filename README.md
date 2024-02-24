@@ -47,6 +47,20 @@ val patchFunction: String => ((String, Int)) => String = name => nameWithPop => 
 
 val enrichedTree = treeA.graft(treeB)(matchingFunction)(patchFunction)
 ```
+### CombinedTree
+The `CombinedTree` class is a sophisticated feature of the Libertree library, designed to merge and enrich two trees of potentially different types. This abstraction allows for powerful operations where elements from one tree can be combined with elements from another based on specific matching criteria, making it ideal for complex data manipulation and enrichment tasks.
+- **Flexible Merging**: Supports merging trees with different structures and data types, allowing for a wide range of applications.
+- **Data Enrichment**: Through the `zip` and `zipMap` methods, it provides a straightforward way to enrich the data of one tree with another by applying a transformation function based on matching criteria.
+
+#### Creating a CombinedTree
+
+To create a `CombinedTree`, you must provide two trees and a join function that defines how to match elements from these trees. The `apply` method facilitates the creation of a `CombinedTree` instance:
+
+```scala
+val combinedTreeOption = CombinedTree(leftTree, rightTree)(joinFunction)
+```
+
+
 ## Contributing
 
 Contributions to Libertree are more than welcome! If you have any suggestions for improvement, or if you encounter any issues, please feel free to submit a pull request or open an issue.
